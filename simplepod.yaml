@@ -1,0 +1,75 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: daniel
+  annotations:
+    givenname: retana
+    surname: daniel
+  labels:
+    band: acdc
+    instrument: micrphone
+spec:
+  containers:
+    - name: opensuse
+      image: opensuse/leap
+      command:
+        - "bin/bash"
+        - "-c"
+        - "sleep 10000"
+
+#containers:
+#    - name: nginx
+#      image: nginx:1.25.0
+#    - name: sise
+#      image: mhausenblas/simpleservice:0.5.0
+#      ports:
+#        - containerPort: 9876
+#      volumeMounts:
+ #       - name: my-secret
+  #        mountPath: "/root/.ssh"
+  #volumes:
+   # - name: my-secret
+    #  secret:
+     #   secretName: myssh
+
+#      volumeMounts:
+ #       - name: nfs-local
+  #        mountPath: /nfs-local
+#  volumes:
+ #   - name: nfs-local
+  #    nfs:
+   #     server: 192.168.100.227
+    #    path: /home/dretana/Documents/NFS
+     #   readOnly: false
+
+#      volumeMounts:
+ #       - name: config-volume
+  #        mountPath: /etc/config
+#  volumes:
+ #   - name: config-volume
+  #    configMap:
+   #     name: configdir
+
+#      env:
+ #       - name: SECRET_USERNAME
+  #        valueFrom:
+   #         secretKeyRef:
+    #          name: mysecret2
+     #         key: username
+      #  - name: SECRET_PASSWORD
+       #   valueFrom:
+        #    secretKeyRef:
+         #     name: mysecret2
+          #    key: password
+
+   #      env:
+ #       - name: PRUEBA_ENV
+  #        value: "pruebaenv"
+#      envFrom:
+ #       - configMapRef:
+  #          name: mainconfigmap
+#  tolerations:
+ #   - key: "band"
+  #    operator: "Equal"
+   #   value: "acdc"
+    #  effect: "NoSchedule"
