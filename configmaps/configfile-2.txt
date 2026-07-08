@@ -1,0 +1,2 @@
+config_val1=valor_1
+config_val2=valor_2

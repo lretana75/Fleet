@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta
+kind: Kustomization
+
+namePrefix: prod-
+commonLabels: prod
+
+resources:
+- ../../base
+
+patches:
+  - prod-nginx-deployment.yaml
+  - prod-nodeportservice.yaml
+
+images:
+  - name: nginx
+    newTag: 1.25.1

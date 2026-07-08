@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  namespace: rbac
+  name: daniel-token
+  annotations:
+    kubernetes.io/service-account.name: daniel
